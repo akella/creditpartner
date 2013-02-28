@@ -140,6 +140,7 @@ a{
 }
 
 .sequence{
+	background: #7fa52c;
 	@include background-image(linear-gradient(left,#7fa52c, #9eca38));
 	position: relative;
 	min-width: 1000px;
@@ -564,6 +565,7 @@ a{
 
 
 .request{
+	background: #7fa52c;
 	@include background-image(linear-gradient(#7fa52c, #99c536));
 	box-shadow: 0 1px 1px rgba(0,0,0,.25) inset;
 	padding: 0 0 48px;
@@ -622,6 +624,7 @@ a{
 		font-family: Calibri, Arial, sans-serif;
 		text-shadow:0 1px 0 rgba(0,0,0,.25);
 		box-shadow:0 -3px 0 #023692 inset, 0 1px 0 #5f9920;
+		background: #66e0ff;
 		@include background-image(linear-gradient(#66e0ff, #0662b7));
 		border-radius:35px;
 		border:0;
