@@ -144,7 +144,7 @@ a{
 	@include background-image(linear-gradient(left,#7fa52c, #9eca38));
 	position: relative;
 	min-width: 1000px;
-	margin: -38px 0 -2px;
+	margin: -38px 0 0;
 	h2{
 		font-family: Calibri, Arial, sans-serif;
 		font-weight: normal;
@@ -239,6 +239,7 @@ a{
 
 
 .work{
+	margin-top: -4px;
 	display: inline-block;
 	width: 100%;
 	min-width: 1000px;
@@ -251,7 +252,8 @@ a{
 		h2{
 			@extend %hide-text;
 			@include sized-sprite($icons, 'how-this-works');
-			margin: 0 0 34px -2px;
+			margin: 0 0 34px -3px;
+			position: relative;
 		}
 	}
 	.devider-shadow{
@@ -296,7 +298,7 @@ a{
 .benefits{
 	float: left;
 	width: 290px;
-	padding: 8px 0 0;
+	padding: 9px 0 0;
 	.benefits__title{
 		font-size: 23px;
 		font-weight: normal;
