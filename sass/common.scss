@@ -145,6 +145,7 @@ a{
 	position: relative;
 	min-width: 1000px;
 	margin: -38px 0 0;
+	height: 458px;
 	h2{
 		font-family: Calibri, Arial, sans-serif;
 		font-weight: normal;
@@ -162,6 +163,7 @@ a{
 		padding: 51px 0 61px;
 		background: url(../img/bg-arr.png) no-repeat 100% 0;
 		min-width: 1000px;
+		height: 346px;
 	}
 	.devider{
 		@include sized-sprite($icons, 'devider-1');
