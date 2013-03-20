@@ -147,7 +147,7 @@ a{
 	margin: -38px 0 0;
 	height: 458px;
 	h2{
-		font-family: Calibri, Arial, sans-serif;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
 		font-weight: normal;
 		font-size: 24px;
 		text-shadow:0 1px 0 rgba(0,0,0,.45);
@@ -228,7 +228,7 @@ a{
 	p{
 		text-shadow:0 1px 0 rgba(0,0,0,.45);
 		font-size: 19px;
-		font-family: 'HelveticaNeueBold', Arial, sans-serif;
+		font-family: 'HelveticaNeueBold', Arial, Helvetica, sans-serif;
 		color:#fff;
 		text-transform: uppercase;
 		display: inline-block;
@@ -325,7 +325,7 @@ a{
 			color: #647485;
 			font-size: 17px;
 			font-weight: bold;
-			font-family: Calibri, Arial, sans-serif;
+			font-family: Calibri, Arial, Helvetica, sans-serif;
 			margin: 0 0 19px;
 			div{
 				display: inline-block;
@@ -347,7 +347,7 @@ a{
 			background: #99c033;
 			vertical-align: middle;
 			margin-right: 11px;
-			font-family: 'HelveticaNeueBold', Arial, sans-serif;
+			font-family: 'HelveticaNeueBold', Arial, Helvetica, sans-serif;
 		}
 		.benefits__num1{
 			@extend %benefits__num;
@@ -373,7 +373,7 @@ a{
 	p{
 		color: #647485;
 		font-size: 15px;
-		font-family: Calibri, Arial, sans-serif;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
 		line-height: 1.25;
 	}
 }
@@ -384,11 +384,53 @@ a{
 	padding: 32px 0 0;
 	.in{position: relative;}
 	.credit__title{
-		font-size: 58px;
+		font-size: 48px;
 		color:#fff;
 		font-weight: normal;
-		margin: 0 0 74px -4px;
 		white-space: nowrap;
+		line-height: 88px;
+		margin: 0 auto 78px;
+    	width: 960px;
+	}
+	.credit__tab{
+		display: inline-block;
+		vertical-align: middle;
+		background: #2b68af;
+		margin: 0 5px 0 20px;
+		position: relative;
+		top: -4px;
+		li{
+			list-style: none;
+			float: left;
+			line-height: 74px;
+			height: 88px;
+			padding: 0 22px;
+			font-size: 50px;
+			cursor: pointer;
+			position: relative;
+			font-family: Calibri, Arial, Helvetica, sans-serif;
+			@include background-image(linear-gradient(rgba(0,0,0,.2), rgba(white,.2)));
+			box-shadow:0 2px 1px rgba(0,0,0,.2) inset, 0 1px 1px rgba(white,.45);
+			&:hover{
+				@include background-image(linear-gradient(rgba(white,.2), rgba(0,0,0,.2)));
+			}
+		}
+		.is-active{
+			background:#fff;
+			background-image: none;
+			color: #8fb932;
+			box-shadow:0 1px 2px rgba(0,0,0,.65);
+			position: relative;
+			&:after{
+				content:'';
+				position: absolute;
+				@include sized-sprite($icons, 'arr3');
+				bottom: -12px;
+				margin-left: -8px;
+				left: 50%;
+			}
+			&:hover{background-image: none;}
+		}
 	}
 	.credit__select{
 		display: inline-block;
@@ -401,7 +443,7 @@ a{
 		color:#96bf34;
 		padding: 0 0 7px 35px;
 		top: -5px;
-		font-family: Calibri, Arial, sans-serif;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
 		font-size: 60px;
 		margin: 0 2px 0 14px;
 		.arr{
@@ -438,22 +480,57 @@ a{
 		float: left;
 		width: 302px;
 		text-align: center;
-		img{
-			margin: 0 0 8px;
+		a:hover .credit__step-img img{
+			box-shadow:0 0 0 13px #20528d;
 		}
 		p{
 			font-size: 25px;
-			font-family: Calibri, Arial, sans-serif;
+			font-family: Calibri, Arial, Helvetica, sans-serif;
 			line-height: 1.2;
 			color: #fff;
 			letter-spacing: -0.01em;
 			margin: 0 15px 0 15px;
 		}
 	}
+	.credit__step-img{
+		margin: 0 auto 8px;
+		position: relative;
+		height: 190px;
+		width: 190px;
+		a{display: inline-block;}
+		img{
+			border-radius:50%;
+			box-shadow:0 0 0 6px #20528d;
+			vertical-align: top;
+		}
+	}
+	.credit__step-num{
+		position: absolute;
+		font-family: 'HelveticaNeueBold', Arial, Helvetica, sans-serif;
+		font-size: 44px;
+		color:#fff;
+		height: 60px;
+		width: 60px;
+		border-radius:50%;
+		left:-2px;
+		top:3px;
+		text-shadow:0 1px 0 rgba(0,0,0,.3);
+		box-shadow:0 1px 0 rgba(0,0,0,.5);
+		@include background-image(linear-gradient(#9eca38, #7fa52c));
+	}
+	.credit__shadow{
+		box-shadow:0 1px 6px #1b406c inset;
+		position: absolute;
+		top:0;
+		left:0;
+		border-radius:50%;
+		width: 100%;
+		height: 100%;
+	}
 	.next-arr{
 		float: left;
 		@include sized-sprite($icons, 'arr');
-		margin: 74px 0 0;
+		margin: 68px 0 0;
 	}
 	.credit__bottom{
 		background: #20528d;
@@ -463,7 +540,7 @@ a{
 		padding: 24px 0 38px;
 	}
 	.credit__add-inf{
-		font-family: Calibri, Arial, sans-serif;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
 		font-size: 15px;
 		color:#fff;
 		float: left;
@@ -473,7 +550,28 @@ a{
 		line-height: 1.2;
 	}
 }
-
+.credit_mod{
+	background: #2b68af url(../img/bg-basket2.png);
+	.credit__step-img{
+		img{
+			box-shadow:0 0 0 6px #668b13;
+		}
+	}
+	.credit__step{
+		a:hover .credit__step-img img{
+			box-shadow:0 0 0 13px #668b13;
+		}
+	}
+	.credit__shadow{
+		box-shadow:0 1px 6px #40413e inset;
+	}
+	.credit__step-num{
+		@include background-image(linear-gradient(#5792d1, #2f5e9e));
+	}
+	.credit__bottom{
+		background: #668b13;
+	}
+}
 
 .partners{
 	background: #e8e8e8;
@@ -481,6 +579,7 @@ a{
 	width: 100%;
 	min-width: 1000px;
 	padding: 33px 0 0;
+	.is-open{height: auto;}
 	.partners__title{
 		@include sized-sprite($icons, 'title');
 		text-align: center;
@@ -493,6 +592,8 @@ a{
 	}
 	.partners__list{
 		text-align: center;
+		overflow: hidden;
+		height: 222px;
 		li{
 			list-style: none;
 			display: inline-block;
@@ -513,8 +614,23 @@ a{
 			vertical-align: middle;
 		}
 	}
+	&.is-open{
+		.partners__list{height: auto;}
+	}
 	.btn-more{
 		margin: -13px auto -17px;
+	}
+}
+.is-open{
+	.partners__list{
+		margin-bottom: 21px;
+	}
+	.btn-more{
+		background-position: sprite-position($icons, 'more2');
+		color:#fff;
+		.btn-more__arr{
+			display: block;
+		}
 	}
 }
 .btn-more{
@@ -526,6 +642,14 @@ a{
 	line-height: 37px;
 	font-size: 14px;
 	color:#2b68af;
+	position: relative;
+	.btn-more__arr{
+		display: none;
+		position: absolute;
+		@include sized-sprite($icons, 'arr2');
+		top:16px;
+		right: 38px;
+	}
 }
 
 
@@ -533,7 +657,7 @@ a{
 	display: inline-block;
 	width: 100%;
 	min-width: 1000px;
-	padding: 23px 0 48px;
+	padding: 48px 0;
 	.clients__title{
 		text-align: center;
 		color:#2b68af;
@@ -544,6 +668,8 @@ a{
 	}
 	.clients__list{
 		text-align: center;
+		height: 222px;
+		overflow: hidden;
 		li{
 			list-style: none;
 			display: inline-block;
@@ -564,6 +690,9 @@ a{
 			vertical-align: middle;
 		}
 	}
+	&.is-open{
+		.clients__list{height: auto;}
+	}
 	.btn-more{margin-top: 8px;}
 }
 
@@ -574,7 +703,7 @@ a{
 	box-shadow: 0 1px 1px rgba(0,0,0,.25) inset;
 	padding: 0 0 48px;
 	h2{
-		font-family: Calibri, Arial, sans-serif;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
 		font-size: 60px;
 		font-weight: normal;
 		color: #fff;
@@ -588,7 +717,7 @@ a{
 		position: relative;
 		label{
 			display: block;
-			font-family: Calibri, Arial, sans-serif;
+			font-family: Calibri, Arial, Helvetica, sans-serif;
 			font-size: 18px;
 			color:#fff;
 			margin:0 0 8px 33px;
@@ -602,7 +731,7 @@ a{
 			width: 490px - 60px;
 			color:#3b3b3b;
 			font-size: 35px;
-			font-family: Calibri, Arial, sans-serif;
+			font-family: Calibri, Arial, Helvetica, sans-serif;
 			&:focus{outline: none; }
 		}
 		.request__input::-webkit-input-placeholder{color:#3b3b3b;}
@@ -614,7 +743,7 @@ a{
 		color: #fff;
 		font-size: 35px;
 		position: absolute;
-		font-family: Calibri, Arial, sans-serif;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
 		margin: 0 14px 0 0;
 		top: 40px;
 		right: 100%;
@@ -625,7 +754,7 @@ a{
 		width: 360px;
 		text-align: center;
 		font-size: 35px;
-		font-family: Calibri, Arial, sans-serif;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
 		text-shadow:0 1px 0 rgba(0,0,0,.25);
 		box-shadow:0 -3px 0 #023692 inset, 0 1px 0 #5f9920;
 		background: #66e0ff;
@@ -635,6 +764,28 @@ a{
 		color:#fff;
 		cursor: pointer;
 		display: block;
+		&:hover{
+			@include background-image(linear-gradient(#8ce8ff, #1d7fc7));
+		}
+		&:active{
+			@include background-image(linear-gradient(#1575c2, #56cbf3));
+		}
+	}
+	.request__thanks{
+		text-align: center;
+		padding: 75px 0 0;
+		height: 447px;
+		color: #fff;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
+		h2{
+			font-size: 84px;
+			margin: 6px 0 -2px;
+			line-height: 1;
+		}
+		p{
+			font-size: 22px;
+			line-height: 1;
+		}
 	}
 }
 
@@ -651,7 +802,7 @@ a{
 		opacity: 0.3;
 		color:#fff;
 		font-size: 15px;
-		font-family: Calibri, Arial, sans-serif;
+		font-family: Calibri, Arial, Helvetica, sans-serif;
 		margin: 19px 0 0 34px;
 	}
 	.contact{
